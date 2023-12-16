@@ -4,3 +4,33 @@
     border-radius: 5px;
     padding: 10px 20px;
 }
+.card-body{
+    display: flex;
+    margin-top: 10px;
+    
+}
+.profile{
+    /* display: flex; */
+    margin-left: 10px;
+    
+}
+.title{
+    font-weight: bold;
+}
+.card-img{
+    width: 80%;
+    height: 60%;
+}
+.profile-img{
+    width: 30px;
+    border-radius: 50%;
+}
+/* .circle{
+    background-color: blue;
+    border-radius: 50%;
+}
+.font-icon i {
+    font-size: 24px;
+    color: white;
+
+} */

@@ -5,18 +5,69 @@ const loadCategory = () => {
     .then((data)=>displayCategory(data.data))
 }
 const displayCategory = (data) => {
-    console.log(data)
     const categoryContainer = document.getElementById("category");
     data.forEach((cate) => {
-        console.log(cate)
         const cateBox = document.createElement("div");
         cateBox.classList.add("box");
         cateBox.innerHTML = `
-        <button class="cate-btn">${cate.category}</button>
+        
+        <button onClick="loadAllVideo('${cate.category_id}')" class="cate-btn">${cate.category}</button>
         `;
         categoryContainer.appendChild(cateBox);
     })
 
 }
 
+const loadAllVideo = (id) => {
+    console.log(id)
+  fetch(`https://openapi.programming-hero.com/api/videos/category/${id ? id :1000}`)
+    .then((res) => res.json())
+    .then((data) => displayAllVideo(data.data));
+};
+
+const displayAllVideo = (videos) => {
+    if (videos.length == 0) {
+        const cardContainer = document.getElementById("all-data");
+        cardContainer.innerHTML = "";
+        const card = document.createElement("div");
+        card.innerHTML = `
+        <img class="card-img" src="./icons/Icon.png" alt="">
+        <h1>There is no data found</h1>
+        `;
+        cardContainer.appendChild(card);
+        return;
+
+    }
+    const cardContainer = document.getElementById("all-data");
+    cardContainer.innerHTML = "";
+    videos.forEach((video) => {
+      const card = document.createElement("div");
+      card.classList.add("col");
+      card.innerHTML = `
+        <img class="card-img" src="${video.thumbnail}" alt="">
+        <div class="card-body">
+        <div>
+        <img class="profile-img" src="${
+          video.authors[0].profile_picture
+        }" alt="">
+        </div>
+        <div class="profile">
+        <p class="title">${video.title}</p>
+        <small class="profile-name">${video.authors[0].profile_name}</small>
+        <small class="profile-name">${
+          video.authors[0].verified ? '<i class="fas fa-check-circle font-icon"></i>' : ""
+        }</small>
+        
+        <br>
+        <small>${video.others.views} views</small>
+        </div>
+        
+        `;
+        cardContainer.appendChild(card)
+    });
+}
+
+
+
+loadAllVideo()
 loadCategory();
