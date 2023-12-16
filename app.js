@@ -17,12 +17,20 @@ const displayCategory = (data) => {
     })
 
 }
+// sort block 
+let videosData = [];
+
+
 
 const loadAllVideo = (id) => {
-    console.log(id)
-  fetch(`https://openapi.programming-hero.com/api/videos/category/${id ? id :1000}`)
+  fetch(
+    `https://openapi.programming-hero.com/api/videos/category/${id ? id : 1000}`
+  )
     .then((res) => res.json())
-    .then((data) => displayAllVideo(data.data));
+    .then((data) => {
+      videosData = data.data;
+      displayAllVideo(videosData);
+    });
 };
 
 const displayAllVideo = (videos) => {
@@ -66,6 +74,14 @@ const displayAllVideo = (videos) => {
         cardContainer.appendChild(card)
     });
 }
+
+// sort 
+const sortByViews = () => {
+  videosData.sort(
+    (a, b) => parseInt(b.others.views, 10) - parseInt(a.others.views, 10)
+  );
+  displayAllVideo(videosData);
+};
 
 
 

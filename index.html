@@ -15,10 +15,12 @@
         <a href="index.html"><img src="./icons/Logo.png" alt="logo"></a>
     </div>
     <div class="nav-view">
-        <button onclick="sortVideosByViews()" class="border-0 px-3 py-2">Sort by view</button>
+        <button id="sortButton" onclick="sortByViews()" class="border-0 px-3 py-2">Sort by view</button>
+
+
     </div>
     <div class="nav-blog">
-        <button class="border-0 px-3 py-2">Blog</button>
+        <a class="border-0 px-3 py-2" target="_blank" href="#question">Blog</a>
     </div>
 </section> <hr>
 
@@ -36,8 +38,89 @@
     <div id="all-data"class="row row-cols-1 row-cols-md-4 g-4">
 
     </div>
-</section>
 
+    
+    
+</section>
+<!-- Question section  -->
+<section id="question">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    -> Discuss the scope of var, let, and const
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <h4>VAR:</h4>
+                    <ul>
+                        <li>'var' is function-level scope or global scope.</li>
+                        <li>if variable declare with 'var' the variable declaration is moved to the top during the compilation.</li>
+                        <li>'var' variables can be redeclared and reassigned.</li>
+                    </ul>
+                    </div>
+                <div class="accordion-body">
+                    <h4>LET:</h4>
+                    <ul>
+                        <li>Variables declared with 'let' have block-level scope.</li>
+                        <li>They are not accessible before the declaration.</li>
+                        <li>variables can be reassigned within their scope but cannot be redeclared within the same scope.</li>
+                    </ul>
+                    </div>
+                <div class="accordion-body">
+                    <h4>CONST:</h4>
+                    <ul>
+                        <li>Variables declared with 'const' also have block-level scope</li>
+                        <li>variables cannot be reassigned after declaration.</li>
+                        <li>the variable itself is immutable.</li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    -> Tell us the use cases of null and undefined
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <h4>NULL:</h4>
+                    <ul>
+                        <li>As a placeholder for an object that doesn't exist yet.</li>
+                        <li>To clear an object reference when it's no longer needed.</li>
+                        <li>As a way to signify that a function intentionally returns no value or an absence of value</li>
+                    </ul>
+                    <h4>UNDEFINED:</h4>
+                    <ul>
+                        <li>Variables that haven't been assigned a value are automatically undefined.</li>
+                        <li>As the default return value of a function that doesn't explicitly return anything.</li>
+                        <li>To check if a variable exists or has been assigned a value yet.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    -> What do you mean by REST API?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    RESTful APIs are commonly used in web development to create interfaces that allow different systems to communicate with
+                    each other over the internet. They are flexible, scalable, and widely adopted due to their simplicity and compatibility
+                    with various programming languages and systems.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <!-- script files  -->
