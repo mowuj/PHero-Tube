@@ -1,3 +1,4 @@
+// category 
 const loadCategory = () => {
     
     fetch("https://openapi.programming-hero.com/api/videos/categories")
@@ -19,8 +20,6 @@ const displayCategory = (data) => {
 }
 // sort block 
 let videosData = [];
-
-
 
 const loadAllVideo = (id) => {
   fetch(

@@ -10,9 +10,7 @@
     margin-top: 10px;
     
 }
-
 .profile{
-    /* display: flex; */
     margin-left: 10px;
     
 }
@@ -45,4 +43,15 @@
     width: 50%;
     height: 300px;
     
+}
+
+/* Media query*/
+@media (max-width: 768px) {
+    .cate-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin: 5px;
+        width: 100%;
+        max-width: 200px;
+}
 }
