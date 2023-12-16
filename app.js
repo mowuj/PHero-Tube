@@ -51,8 +51,15 @@ const displayAllVideo = (videos) => {
     videos.forEach((video) => {
       const card = document.createElement("div");
       card.classList.add("col");
+      const { hours, minutes } = handleSeconds(video.others.posted_date);
+      const timeHTML =
+        hours == "" && minutes == ""? ""
+          : `<p class="time">${hours} hrs ${minutes} min ago</p>`;
       card.innerHTML = `
-        <img class="card-img" src="${video.thumbnail}" alt="">
+        <div class="card-top" ><img class="card-img" src="${
+          video.thumbnail
+        }" alt=""></div>
+        <div class="time">${timeHTML}</div>
         <div class="card-body">
         <div>
         <img class="profile-img" src="${
@@ -63,7 +70,9 @@ const displayAllVideo = (videos) => {
         <p class="title">${video.title}</p>
         <small class="profile-name">${video.authors[0].profile_name}</small>
         <small class="profile-name">${
-          video.authors[0].verified ? '<i class="fas fa-check-circle font-icon"></i>' : ""
+          video.authors[0].verified
+            ? '<i class="fas fa-check-circle font-icon"></i>'
+            : ""
         }</small>
         
         <br>
@@ -83,6 +92,12 @@ const sortByViews = () => {
   displayAllVideo(videosData);
 };
 
+const handleSeconds = (seconds) => {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+
+  return { hours, minutes };
+};
 
 
 loadAllVideo()
