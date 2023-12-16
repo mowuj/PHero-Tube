@@ -12,85 +12,87 @@
 <body>
 
     
-    <section id="question" class="container">
-        <h2>Question </h2>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-    
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        -> Discuss the scope of var, let, and const
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <h4>VAR:</h4>
-                        <ul>
-                            <li>'var' is function-level scope or global scope.</li>
-                            <li>if variable declare with 'var' the variable declaration is moved to the top during the
-                                compilation.</li>
-                            <li>'var' variables can be redeclared and reassigned.</li>
-                        </ul>
-                    </div>
-                    <div class="accordion-body">
-                        <h4>LET:</h4>
-                        <ul>
-                            <li>Variables declared with 'let' have block-level scope.</li>
-                            <li>They are not accessible before the declaration.</li>
-                            <li>variables can be reassigned within their scope but cannot be redeclared within the same
-                                scope.</li>
-                        </ul>
-                    </div>
-                    <div class="accordion-body">
-                        <h4>CONST:</h4>
-                        <ul>
-                            <li>Variables declared with 'const' also have block-level scope</li>
-                            <li>variables cannot be reassigned after declaration.</li>
-                            <li>the variable itself is immutable.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        -> Tell us the use cases of null and undefined
-                    </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <h4>NULL:</h4>
-                        <ul>
-                            <li>As a placeholder for an object that doesn't exist yet.</li>
-                            <li>To clear an object reference when it's no longer needed.</li>
-                            <li>As a way to signify that a function intentionally returns no value or an absence of value
-                            </li>
-                        </ul>
-                        <h4>UNDEFINED:</h4>
-                        <ul>
-                            <li>Variables that haven't been assigned a value are automatically undefined.</li>
-                            <li>As the default return value of a function that doesn't explicitly return anything.</li>
-                            <li>To check if a variable exists or has been assigned a value yet.</li>
-                        </ul>
+    <section id="question" class="container row d-flex justify-content-center align-items-center mt-5" >
+        <div class="col-md-8">
+            <h2 class="text-center">Answer </h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+            
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            -> Discuss the scope of var, let, and const
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            
+                            <h4>VAR:</h4>
+                            <ul>
+                                <li>Var variable is Functional scope.</li>
+                                <li>Var variable can be updated and re-declared into the scope.</li>
+                                <li>Var variables can be declared without initialization.</li>
+                            </ul>
+                        </div>
+                        <div class="accordion-body">
+                            <h4>LET:</h4>
+                            <ul>
+                                <li>Variables declared with 'let' have block-level scope.</li>
+                                <li>They are not accessible before the declaration.</li>
+                                <li>let variable can be updated but cannot be re-declared
+                                into scope.</li>
+                                <li>Let variables also can be declared without initialization.</li>
+                            </ul>
+                        </div>
+                        <div class="accordion-body">
+                            <h4>CONST:</h4>
+                            <ul>
+                                <li>Variables declared with 'const' also have block-level scope</li>
+                                <li>const variable cannot be updated or re-declared into scope.</li>
+                                <li>const variables cannot be declared without initialization.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        -> What do you mean by REST API?
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        RESTful APIs are commonly used in web development to create interfaces that allow different systems
-                        to communicate with
-                        each other over the internet. They are flexible, scalable, and widely adopted due to their
-                        simplicity and compatibility
-                        with various programming languages and systems.
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            -> Tell us the use cases of null and undefined
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            
+                            <h4>NULL:</h4>
+                            <ul>
+                                <li>Null is object type.</li>
+                                <li>Null means intentional absence of the value.</li>
+                                <li>When used in arithmetic operations,null will be converted to 0 behind the screens.</li>
+                                
+                            </ul>
+                            <h4>UNDEFINED:</h4>
+                            <ul>
+                                <li>Undefined is a type.</li>
+                                <li>Undefined means, the value does not exist in the
+                                compiler.</li>
+                                <li>When used in arithmetic operations, undefined will result in NaN.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            -> What do you mean by REST API?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            An API is simply a medium to fetch or send data between interfaces.Here RESTAPI is stand Representational State Transfer Application Programming Interface.Its provides a standardized way for different applications and services to communicate with each other over the internet.API is essentially a set of tools and protocols thats allows different software programs to interact.and REST is a set of guidelines for designing API that are efficient.Thats like as a set of rules for how the waiter should take your order and deliver your food.RESTAPI use HTTP methods (GET,POST,PUTand DELETE) to perform.
+
+                        </div>
                     </div>
                 </div>
             </div>

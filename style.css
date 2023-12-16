@@ -4,15 +4,13 @@
     border-radius: 5px;
     padding: 10px 20px;
 }
-button a {
-    text-decoration: none;
-    color: inherit;
-}
+
 .card-body{
     display: flex;
     margin-top: 10px;
     
 }
+
 .profile{
     /* display: flex; */
     margin-left: 10px;
@@ -32,5 +30,19 @@ button a {
 }
 .profile-img{
     width: 30px;
+    height: 30px;
     border-radius: 50%;
+    object-fit: cover;
+}
+.noData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 50vh;
+}
+.noData-img{
+    width: 50%;
+    height: 300px;
+    
 }

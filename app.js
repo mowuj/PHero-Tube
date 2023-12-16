@@ -35,14 +35,15 @@ const loadAllVideo = (id) => {
 
 const displayAllVideo = (videos) => {
     if (videos.length == 0) {
-        const cardContainer = document.getElementById("all-data");
-        cardContainer.innerHTML = "";
-        const card = document.createElement("div");
-        card.innerHTML = `
-        <img class="card-img" src="./icons/Icon.png" alt="">
-        <h1>There is no data found</h1>
+        const noDataContainer = document.getElementById("videos");
+        noDataContainer.innerHTML = "";
+      const noData = document.createElement("div");
+        noData.classList.add("noData");
+        noData.innerHTML = `
+        <img class="noData-img" src="./icons/Icon.png" alt="">
+        <h1>OOPS!!Sorry There is no content here.</h1>
         `;
-        cardContainer.appendChild(card);
+        noDataContainer.appendChild(noData);
         return;
 
     }

@@ -9,20 +9,45 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- navbar section  -->
-<section class="container d-flex justify-content-between my-3 ">
-    <div class="nav-logo">
-        <a href="index.html"><img src="./icons/Logo.png" alt="logo"></a>
-    </div>
-    <div class="nav-view">
-        <button id="sortButton" onclick="sortByViews()" class="border-0 px-3 py-2">Sort by view</button>
 
+    <!-- nav start  -->
 
-    </div>
-    <div class="nav-blog">
-        <button class="border-0 px-3 py-2"><a  target="_blank" href="./question.html">Blog</a></button>
-    </div>
-</section> <hr>
+    <nav class="navbar navbar-expand-lg ms-5">
+        <div class="container-fluid d-flex justify-content-around align-items-center">
+            <a class="navbar-brand mx-5" href="#">
+                <img src="./icons/Logo.png" alt="Bootstrap" width="200" height="40">
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item ms-5">
+                        <a class="nav-link active text-dark" aria-current="page" href="#">
+                            <button id="sortButton" onclick="sortByViews()" class="border-0 px-3 py-2 rounded-2">Sort by view</button>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0 ">
+                    <li class="nav-item ms-5">
+                        <button class="border-0 bg-danger rounded-2"><a class="nav-link active  text-white" target="_blank" aria-current="page"
+                                href="./question.html">Blog</a></button>
+                
+                    </li>
+                
+                
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav end  -->
+
+ <hr>
 
 <!-- category section  -->
 
@@ -34,7 +59,7 @@
 
 <!-- all data section  -->
 
-<section class="container">
+<section id="videos" class="container">
     <div id="all-data"class="row row-cols-1 row-cols-md-4 g-4">
 
     </div>
